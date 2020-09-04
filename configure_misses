@@ -44,9 +44,6 @@ Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: CMOCKA
 Configure miss: nettle_gost28147_set_key
 Configure miss: nettle_streebog512_update
-Configure miss: gmp soname
-Configure miss: nettle soname
-Configure miss: hogweed soname
 Configure miss: unbound library
 Configure miss: tss library
 Configure miss: autogen
@@ -114,9 +111,6 @@ Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: CMOCKA
 Configure miss: nettle_gost28147_set_key
 Configure miss: nettle_streebog512_update
-Configure miss: gmp soname
-Configure miss: nettle soname
-Configure miss: hogweed soname
 Configure miss: unbound library
 Configure miss: tss library
 Configure miss: autogen

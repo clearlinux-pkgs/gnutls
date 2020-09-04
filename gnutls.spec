@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xD605848ED7E69871 (ueno@gnu.org)
 #
 Name     : gnutls
-Version  : 3.6.14
-Release  : 66
-URL      : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/gnutls-3.6.14.tar.xz
-Source0  : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/gnutls-3.6.14.tar.xz
-Source1  : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/gnutls-3.6.14.tar.xz.sig
+Version  : 3.6.15
+Release  : 67
+URL      : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/gnutls-3.6.15.tar.xz
+Source0  : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/gnutls-3.6.15.tar.xz
+Source1  : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/gnutls-3.6.15.tar.xz.sig
 Summary  : Transport Security Layer implementation for the GNU system
 Group    : Development/Tools
 License  : BSD-3-Clause GPL-3.0 GPL-3.0+ LGPL-2.0+ LGPL-2.1 LGPL-3.0 MIT
@@ -166,12 +166,12 @@ man components for the gnutls package.
 
 
 %prep
-%setup -q -n gnutls-3.6.14
-cd %{_builddir}/gnutls-3.6.14
+%setup -q -n gnutls-3.6.15
+cd %{_builddir}/gnutls-3.6.15
 %patch1 -p1
 %patch2 -p1
 pushd ..
-cp -a gnutls-3.6.14 build32
+cp -a gnutls-3.6.15 build32
 popd
 
 %build
@@ -179,7 +179,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1591660246
+export SOURCE_DATE_EPOCH=1599238035
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -O3 -falign-functions=32 -fno-lto -fno-math-errno -fno-semantic-interposition -fno-trapping-math "
 export FCFLAGS="$FFLAGS -O3 -falign-functions=32 -fno-lto -fno-math-errno -fno-semantic-interposition -fno-trapping-math "
@@ -204,23 +204,23 @@ export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-make VERBOSE=1 V=1 %{?_smp_mflags} check || :
+make %{?_smp_mflags} check || :
 cd ../build32;
-make VERBOSE=1 V=1 %{?_smp_mflags} check || : || :
+make %{?_smp_mflags} check || : || :
 
 %install
-export SOURCE_DATE_EPOCH=1591660246
+export SOURCE_DATE_EPOCH=1599238035
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gnutls
-cp %{_builddir}/gnutls-3.6.14/LICENSE %{buildroot}/usr/share/package-licenses/gnutls/1f511bc8132f3904e090af21d25ef3453314b910
-cp %{_builddir}/gnutls-3.6.14/doc/COPYING %{buildroot}/usr/share/package-licenses/gnutls/0dd432edfab90223f22e49c02e2124f87d6f0a56
-cp %{_builddir}/gnutls-3.6.14/doc/COPYING.LESSER %{buildroot}/usr/share/package-licenses/gnutls/545f380fb332eb41236596500913ff8d582e3ead
-cp %{_builddir}/gnutls-3.6.14/doc/examples/tlsproxy/LICENSE %{buildroot}/usr/share/package-licenses/gnutls/06407f2dacc5ba7cbae1b6120c6a57379969a6f3
-cp %{_builddir}/gnutls-3.6.14/lib/accelerated/x86/license.txt %{buildroot}/usr/share/package-licenses/gnutls/54c70759aa4b060ff33b7412fa6f38480fc840b2
-cp %{_builddir}/gnutls-3.6.14/lib/inih/LICENSE.txt %{buildroot}/usr/share/package-licenses/gnutls/d097282eb6f05d825f591cef06bac3654b58feba
-cp %{_builddir}/gnutls-3.6.14/src/libopts/COPYING.gplv3 %{buildroot}/usr/share/package-licenses/gnutls/a8573c5c670d8a150d41fbde33d79e8e49d2a9fa
-cp %{_builddir}/gnutls-3.6.14/src/libopts/COPYING.lgplv3 %{buildroot}/usr/share/package-licenses/gnutls/8ca3cbd336e9a13d5ee05753567d9261af4066a3
-cp %{_builddir}/gnutls-3.6.14/src/libopts/COPYING.mbsd %{buildroot}/usr/share/package-licenses/gnutls/76f15ccf78ed039d563200c8db64f85d17c3d7cb
+cp %{_builddir}/gnutls-3.6.15/LICENSE %{buildroot}/usr/share/package-licenses/gnutls/1f511bc8132f3904e090af21d25ef3453314b910
+cp %{_builddir}/gnutls-3.6.15/doc/COPYING %{buildroot}/usr/share/package-licenses/gnutls/0dd432edfab90223f22e49c02e2124f87d6f0a56
+cp %{_builddir}/gnutls-3.6.15/doc/COPYING.LESSER %{buildroot}/usr/share/package-licenses/gnutls/545f380fb332eb41236596500913ff8d582e3ead
+cp %{_builddir}/gnutls-3.6.15/doc/examples/tlsproxy/LICENSE %{buildroot}/usr/share/package-licenses/gnutls/06407f2dacc5ba7cbae1b6120c6a57379969a6f3
+cp %{_builddir}/gnutls-3.6.15/lib/accelerated/x86/license.txt %{buildroot}/usr/share/package-licenses/gnutls/54c70759aa4b060ff33b7412fa6f38480fc840b2
+cp %{_builddir}/gnutls-3.6.15/lib/inih/LICENSE.txt %{buildroot}/usr/share/package-licenses/gnutls/d097282eb6f05d825f591cef06bac3654b58feba
+cp %{_builddir}/gnutls-3.6.15/src/libopts/COPYING.gplv3 %{buildroot}/usr/share/package-licenses/gnutls/a8573c5c670d8a150d41fbde33d79e8e49d2a9fa
+cp %{_builddir}/gnutls-3.6.15/src/libopts/COPYING.lgplv3 %{buildroot}/usr/share/package-licenses/gnutls/8ca3cbd336e9a13d5ee05753567d9261af4066a3
+cp %{_builddir}/gnutls-3.6.15/src/libopts/COPYING.mbsd %{buildroot}/usr/share/package-licenses/gnutls/76f15ccf78ed039d563200c8db64f85d17c3d7cb
 pushd ../build32/
 %make_install32
 if [ -d  %{buildroot}/usr/lib32/pkgconfig ]
@@ -1459,12 +1459,12 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libgnutls.so.30
-/usr/lib64/libgnutls.so.30.28.0
+/usr/lib64/libgnutls.so.30.28.1
 
 %files lib32
 %defattr(-,root,root,-)
 /usr/lib32/libgnutls.so.30
-/usr/lib32/libgnutls.so.30.28.0
+/usr/lib32/libgnutls.so.30.28.1
 /usr/lib32/libgnutlsxx.so.28
 /usr/lib32/libgnutlsxx.so.28.1.0
 
