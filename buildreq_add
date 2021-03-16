@@ -1,23 +1,18 @@
-#
-# This file contains extra pkgconfig build requirements that don't get picked up but are 
-# desirable. One name per line, no whitespace.
-#
-nettle-dev
-nettle-lib
-nettle
-libidn-dev
-libidn-dev32
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.
 bison
+datefudge
 gmp-dev
-valgrind
-libtasn1-dev
-libtasn1-dev32
-net-tools
-nettle-dev32
-nettle-lib32
 gmp-dev32
 gmp-lib32
+libidn-dev
+libidn-dev32
+libtasn1-dev
+libtasn1-dev32
 libunistring-dev
 libunistring-dev32
-datefudge
+net-tools
+nettle-dev
+nettle-dev32
 util-linux
+valgrind

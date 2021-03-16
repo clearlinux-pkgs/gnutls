@@ -11,6 +11,7 @@ libgnutls.so.30:GNUTLS_3_6_5
 libgnutls.so.30:GNUTLS_3_6_6
 libgnutls.so.30:GNUTLS_3_6_8
 libgnutls.so.30:GNUTLS_3_6_9
+libgnutls.so.30:GNUTLS_3_7_0
 libgnutls.so.30:GNUTLS_FIPS140_3_4
 libgnutls.so.30:GNUTLS_PRIVATE_3_4
 libgnutls.so.30:_dsa_generate_dss_g
@@ -31,6 +32,7 @@ libgnutls.so.30:_gnutls_buffer_unescape
 libgnutls.so.30:_gnutls_cidr_to_string
 libgnutls.so.30:_gnutls_cipher_get_iv
 libgnutls.so.30:_gnutls_cipher_to_entry
+libgnutls.so.30:_gnutls_crypto_register_cipher
 libgnutls.so.30:_gnutls_decode_ber_rs_raw
 libgnutls.so.30:_gnutls_digest_exists
 libgnutls.so.30:_gnutls_ecc_curve_is_supported
@@ -76,6 +78,7 @@ libgnutls.so.30:gnutls_alert_get_name
 libgnutls.so.30:gnutls_alert_get_strname
 libgnutls.so.30:gnutls_alert_send
 libgnutls.so.30:gnutls_alert_send_appropriate
+libgnutls.so.30:gnutls_alert_set_read_function
 libgnutls.so.30:gnutls_alpn_get_selected_protocol
 libgnutls.so.30:gnutls_alpn_set_protocols
 libgnutls.so.30:gnutls_anon_allocate_client_credentials
@@ -301,7 +304,10 @@ libgnutls.so.30:gnutls_handshake_set_max_packet_length
 libgnutls.so.30:gnutls_handshake_set_post_client_hello_function
 libgnutls.so.30:gnutls_handshake_set_private_extensions
 libgnutls.so.30:gnutls_handshake_set_random
+libgnutls.so.30:gnutls_handshake_set_read_function
+libgnutls.so.30:gnutls_handshake_set_secret_function
 libgnutls.so.30:gnutls_handshake_set_timeout
+libgnutls.so.30:gnutls_handshake_write
 libgnutls.so.30:gnutls_hash
 libgnutls.so.30:gnutls_hash_copy
 libgnutls.so.30:gnutls_hash_deinit
@@ -322,6 +328,7 @@ libgnutls.so.30:gnutls_hex_encode
 libgnutls.so.30:gnutls_hex_encode2
 libgnutls.so.30:gnutls_hkdf_expand
 libgnutls.so.30:gnutls_hkdf_extract
+libgnutls.so.30:gnutls_hkdf_self_test
 libgnutls.so.30:gnutls_hmac
 libgnutls.so.30:gnutls_hmac_copy
 libgnutls.so.30:gnutls_hmac_deinit
@@ -469,6 +476,7 @@ libgnutls.so.30:gnutls_openpgp_set_recv_key_function
 libgnutls.so.30:gnutls_packet_deinit
 libgnutls.so.30:gnutls_packet_get
 libgnutls.so.30:gnutls_pbkdf2
+libgnutls.so.30:gnutls_pbkdf2_self_test
 libgnutls.so.30:gnutls_pcert_deinit
 libgnutls.so.30:gnutls_pcert_export_openpgp
 libgnutls.so.30:gnutls_pcert_export_x509
@@ -810,6 +818,7 @@ libgnutls.so.30:gnutls_session_set_ptr
 libgnutls.so.30:gnutls_session_set_verify_cert
 libgnutls.so.30:gnutls_session_set_verify_cert2
 libgnutls.so.30:gnutls_session_set_verify_function
+libgnutls.so.30:gnutls_session_set_verify_output_function
 libgnutls.so.30:gnutls_session_supplemental_register
 libgnutls.so.30:gnutls_session_ticket_enable_client
 libgnutls.so.30:gnutls_session_ticket_enable_server
@@ -875,6 +884,7 @@ libgnutls.so.30:gnutls_tdb_init
 libgnutls.so.30:gnutls_tdb_set_store_commitment_func
 libgnutls.so.30:gnutls_tdb_set_store_func
 libgnutls.so.30:gnutls_tdb_set_verify_func
+libgnutls.so.30:gnutls_tlsprf_self_test
 libgnutls.so.30:gnutls_tpm_get_registered
 libgnutls.so.30:gnutls_tpm_key_list_deinit
 libgnutls.so.30:gnutls_tpm_key_list_get_url
@@ -1259,12 +1269,15 @@ libgnutls.so.30:gnutls_x509_trust_list_deinit
 libgnutls.so.30:gnutls_x509_trust_list_get_issuer
 libgnutls.so.30:gnutls_x509_trust_list_get_issuer_by_dn
 libgnutls.so.30:gnutls_x509_trust_list_get_issuer_by_subject_key_id
+libgnutls.so.30:gnutls_x509_trust_list_get_ptr
 libgnutls.so.30:gnutls_x509_trust_list_init
 libgnutls.so.30:gnutls_x509_trust_list_iter_deinit
 libgnutls.so.30:gnutls_x509_trust_list_iter_get_ca
 libgnutls.so.30:gnutls_x509_trust_list_remove_cas
 libgnutls.so.30:gnutls_x509_trust_list_remove_trust_file
 libgnutls.so.30:gnutls_x509_trust_list_remove_trust_mem
+libgnutls.so.30:gnutls_x509_trust_list_set_getissuer_function
+libgnutls.so.30:gnutls_x509_trust_list_set_ptr
 libgnutls.so.30:gnutls_x509_trust_list_verify_crt
 libgnutls.so.30:gnutls_x509_trust_list_verify_crt2
 libgnutls.so.30:gnutls_x509_trust_list_verify_named_crt
