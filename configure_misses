@@ -54,8 +54,6 @@ Configure miss: pathfind in -lgen
 Configure miss: pathfind in -lgen
 Configure miss: pstat_getprocvm
 Configure miss: pstat_getprocvm
-Configure miss: pthread_sigmask
-Configure miss: pthread_sigmask
 Configure miss: runetype.h
 Configure miss: runetype.h
 Configure miss: strerror_r with POSIX signature
@@ -66,12 +64,6 @@ Configure miss: sys/procset.h presence
 Configure miss: sys/procset.h presence
 Configure miss: sys/procset.h usability
 Configure miss: sys/procset.h usability
-Configure miss: sys/single_threaded.h
-Configure miss: sys/single_threaded.h
-Configure miss: sys/single_threaded.h presence
-Configure miss: sys/single_threaded.h presence
-Configure miss: sys/single_threaded.h usability
-Configure miss: sys/single_threaded.h usability
 Configure miss: sys/stropts.h
 Configure miss: sys/stropts.h
 Configure miss: sys/stropts.h presence
@@ -108,6 +100,8 @@ Configure miss: whether the compiler is clang
 Configure miss: whether the compiler is clang
 Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the compiler produces multi-arch binaries
+Configure miss: whether to add AF_ALG support
+Configure miss: whether to add AF_ALG support
 Configure miss: whether to add cryptodev support
 Configure miss: whether to add cryptodev support
 Configure miss: whether to build OpenSSL compatibility layer
@@ -136,6 +130,8 @@ Configure miss: whether to disable the SSL 2.0 client hello
 Configure miss: whether to disable the SSL 2.0 client hello
 Configure miss: whether to use the included minitasn1
 Configure miss: whether to use the included minitasn1
+Configure miss: whether valgrind works on executables produced by the compiler
+Configure miss: whether valgrind works on executables produced by the compiler
 Configure miss: whether with-libregex was specified
 Configure miss: whether with-libregex was specified
 Configure miss: whether with-libregex-cflags was specified
