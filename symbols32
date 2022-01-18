@@ -13,6 +13,7 @@ libgnutls.so.30:GNUTLS_3_6_8
 libgnutls.so.30:GNUTLS_3_6_9
 libgnutls.so.30:GNUTLS_3_7_0
 libgnutls.so.30:GNUTLS_3_7_2
+libgnutls.so.30:GNUTLS_3_7_3
 libgnutls.so.30:GNUTLS_FIPS140_3_4
 libgnutls.so.30:GNUTLS_PRIVATE_3_4
 libgnutls.so.30:_dsa_generate_dss_g
@@ -249,6 +250,7 @@ libgnutls.so.30:gnutls_digest_get_name
 libgnutls.so.30:gnutls_digest_get_oid
 libgnutls.so.30:gnutls_digest_list
 libgnutls.so.30:gnutls_digest_self_test
+libgnutls.so.30:gnutls_digest_set_secure
 libgnutls.so.30:gnutls_dtls_cookie_send
 libgnutls.so.30:gnutls_dtls_cookie_verify
 libgnutls.so.30:gnutls_dtls_get_data_mtu
@@ -267,6 +269,7 @@ libgnutls.so.30:gnutls_ecc_curve_get_oid
 libgnutls.so.30:gnutls_ecc_curve_get_pk
 libgnutls.so.30:gnutls_ecc_curve_get_size
 libgnutls.so.30:gnutls_ecc_curve_list
+libgnutls.so.30:gnutls_ecc_curve_set_enabled
 libgnutls.so.30:gnutls_encode_ber_digest_info
 libgnutls.so.30:gnutls_encode_gost_rs_value
 libgnutls.so.30:gnutls_encode_rs_value
@@ -281,8 +284,14 @@ libgnutls.so.30:gnutls_ext_raw_parse
 libgnutls.so.30:gnutls_ext_register
 libgnutls.so.30:gnutls_ext_set_data
 libgnutls.so.30:gnutls_fingerprint
+libgnutls.so.30:gnutls_fips140_context_deinit
+libgnutls.so.30:gnutls_fips140_context_init
+libgnutls.so.30:gnutls_fips140_get_operation_state
 libgnutls.so.30:gnutls_fips140_mode_enabled
+libgnutls.so.30:gnutls_fips140_pop_context
+libgnutls.so.30:gnutls_fips140_push_context
 libgnutls.so.30:gnutls_fips140_set_mode
+libgnutls.so.30:gnutls_get_library_config
 libgnutls.so.30:gnutls_get_system_config_file
 libgnutls.so.30:gnutls_global_deinit
 libgnutls.so.30:gnutls_global_init
@@ -693,6 +702,7 @@ libgnutls.so.30:gnutls_protocol_get_id
 libgnutls.so.30:gnutls_protocol_get_name
 libgnutls.so.30:gnutls_protocol_get_version
 libgnutls.so.30:gnutls_protocol_list
+libgnutls.so.30:gnutls_protocol_set_enabled
 libgnutls.so.30:gnutls_psk_allocate_client_credentials
 libgnutls.so.30:gnutls_psk_allocate_server_credentials
 libgnutls.so.30:gnutls_psk_client_get_hint
@@ -840,6 +850,8 @@ libgnutls.so.30:gnutls_sign_get_pk_algorithm
 libgnutls.so.30:gnutls_sign_is_secure
 libgnutls.so.30:gnutls_sign_is_secure2
 libgnutls.so.30:gnutls_sign_list
+libgnutls.so.30:gnutls_sign_set_secure
+libgnutls.so.30:gnutls_sign_set_secure_for_certs
 libgnutls.so.30:gnutls_sign_supports_pk_algorithm
 libgnutls.so.30:gnutls_srp_allocate_client_credentials
 libgnutls.so.30:gnutls_srp_allocate_server_credentials
@@ -897,6 +909,7 @@ libgnutls.so.30:gnutls_transport_get_int
 libgnutls.so.30:gnutls_transport_get_int2
 libgnutls.so.30:gnutls_transport_get_ptr
 libgnutls.so.30:gnutls_transport_get_ptr2
+libgnutls.so.30:gnutls_transport_is_ktls_enabled
 libgnutls.so.30:gnutls_transport_set_errno
 libgnutls.so.30:gnutls_transport_set_errno_function
 libgnutls.so.30:gnutls_transport_set_fastopen
@@ -1152,6 +1165,8 @@ libgnutls.so.30:gnutls_x509_crt_sign
 libgnutls.so.30:gnutls_x509_crt_sign2
 libgnutls.so.30:gnutls_x509_crt_verify
 libgnutls.so.30:gnutls_x509_crt_verify_data2
+libgnutls.so.30:gnutls_x509_ct_sct_get
+libgnutls.so.30:gnutls_x509_ct_sct_get_version
 libgnutls.so.30:gnutls_x509_dn_deinit
 libgnutls.so.30:gnutls_x509_dn_export
 libgnutls.so.30:gnutls_x509_dn_export2
@@ -1163,6 +1178,10 @@ libgnutls.so.30:gnutls_x509_dn_init
 libgnutls.so.30:gnutls_x509_dn_oid_known
 libgnutls.so.30:gnutls_x509_dn_oid_name
 libgnutls.so.30:gnutls_x509_dn_set_str
+libgnutls.so.30:gnutls_x509_ext_ct_export_scts
+libgnutls.so.30:gnutls_x509_ext_ct_import_scts
+libgnutls.so.30:gnutls_x509_ext_ct_scts_deinit
+libgnutls.so.30:gnutls_x509_ext_ct_scts_init
 libgnutls.so.30:gnutls_x509_ext_deinit
 libgnutls.so.30:gnutls_x509_ext_export_aia
 libgnutls.so.30:gnutls_x509_ext_export_authority_key_id

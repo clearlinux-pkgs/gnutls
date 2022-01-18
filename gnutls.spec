@@ -5,14 +5,14 @@
 # Source0 file verified with key 0xD605848ED7E69871 (ueno@gnu.org)
 #
 Name     : gnutls
-Version  : 3.7.2
-Release  : 69
-URL      : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.2.tar.xz
-Source0  : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.2.tar.xz
-Source1  : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.2.tar.xz.sig
+Version  : 3.7.3
+Release  : 70
+URL      : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.3.tar.xz
+Source0  : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.3.tar.xz
+Source1  : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.3.tar.xz.sig
 Summary  : Transport Security Layer implementation for the GNU system
 Group    : Development/Tools
-License  : BSD-3-Clause GPL-3.0 GPL-3.0+ LGPL-2.0+ LGPL-2.1 LGPL-3.0 MIT
+License  : BSD-3-Clause GPL-3.0 GPL-3.0+ LGPL-2.0+ LGPL-2.1 MIT
 Requires: gnutls-bin = %{version}-%{release}
 Requires: gnutls-info = %{version}-%{release}
 Requires: gnutls-lib = %{version}-%{release}
@@ -33,7 +33,6 @@ BuildRequires : gmp-dev32
 BuildRequires : gmp-lib32
 BuildRequires : gtk-doc
 BuildRequires : gtk-doc-dev
-BuildRequires : intltool-dev
 BuildRequires : libidn-dev
 BuildRequires : libidn-dev32
 BuildRequires : libseccomp-dev
@@ -165,12 +164,12 @@ man components for the gnutls package.
 
 
 %prep
-%setup -q -n gnutls-3.7.2
-cd %{_builddir}/gnutls-3.7.2
+%setup -q -n gnutls-3.7.3
+cd %{_builddir}/gnutls-3.7.3
 %patch1 -p1
 %patch2 -p1
 pushd ..
-cp -a gnutls-3.7.2 build32
+cp -a gnutls-3.7.3 build32
 popd
 
 %build
@@ -178,24 +177,28 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1622319089
+export SOURCE_DATE_EPOCH=1642542025
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -O3 -falign-functions=32 -fno-lto -fno-math-errno -fno-semantic-interposition -fno-trapping-math "
-export FCFLAGS="$FFLAGS -O3 -falign-functions=32 -fno-lto -fno-math-errno -fno-semantic-interposition -fno-trapping-math "
-export FFLAGS="$FFLAGS -O3 -falign-functions=32 -fno-lto -fno-math-errno -fno-semantic-interposition -fno-trapping-math "
-export CXXFLAGS="$CXXFLAGS -O3 -falign-functions=32 -fno-lto -fno-math-errno -fno-semantic-interposition -fno-trapping-math "
+export CFLAGS="$CFLAGS -Ofast -falign-functions=32 -fno-lto -fno-semantic-interposition -mno-vzeroupper -mprefer-vector-width=256 "
+export FCFLAGS="$FFLAGS -Ofast -falign-functions=32 -fno-lto -fno-semantic-interposition -mno-vzeroupper -mprefer-vector-width=256 "
+export FFLAGS="$FFLAGS -Ofast -falign-functions=32 -fno-lto -fno-semantic-interposition -mno-vzeroupper -mprefer-vector-width=256 "
+export CXXFLAGS="$CXXFLAGS -Ofast -falign-functions=32 -fno-lto -fno-semantic-interposition -mno-vzeroupper -mprefer-vector-width=256 "
 %configure --disable-static --enable-guile=no \
---with-default-trust-store-dir=/var/cache/ca-certs/anchors
+--with-default-trust-store-dir=/var/cache/ca-certs/anchors \
+--without-tpm \
+--without-tpm2
 make  %{?_smp_mflags}
 
 pushd ../build32/
-export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+export PKG_CONFIG_PATH="/usr/lib32/pkgconfig:/usr/share/pkgconfig"
 export ASFLAGS="${ASFLAGS}${ASFLAGS:+ }--32"
 export CFLAGS="${CFLAGS}${CFLAGS:+ }-m32 -mstackrealign"
 export CXXFLAGS="${CXXFLAGS}${CXXFLAGS:+ }-m32 -mstackrealign"
 export LDFLAGS="${LDFLAGS}${LDFLAGS:+ }-m32 -mstackrealign"
 %configure --disable-static --enable-guile=no \
---with-default-trust-store-dir=/var/cache/ca-certs/anchors   --libdir=/usr/lib32 --build=i686-generic-linux-gnu --host=i686-generic-linux-gnu --target=i686-clr-linux-gnu
+--with-default-trust-store-dir=/var/cache/ca-certs/anchors \
+--without-tpm \
+--without-tpm2   --libdir=/usr/lib32 --build=i686-generic-linux-gnu --host=i686-generic-linux-gnu --target=i686-clr-linux-gnu
 make  %{?_smp_mflags}
 popd
 %check
@@ -208,23 +211,26 @@ cd ../build32;
 make %{?_smp_mflags} check || : || :
 
 %install
-export SOURCE_DATE_EPOCH=1622319089
+export SOURCE_DATE_EPOCH=1642542025
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gnutls
-cp %{_builddir}/gnutls-3.7.2/LICENSE %{buildroot}/usr/share/package-licenses/gnutls/1f511bc8132f3904e090af21d25ef3453314b910
-cp %{_builddir}/gnutls-3.7.2/doc/COPYING %{buildroot}/usr/share/package-licenses/gnutls/0dd432edfab90223f22e49c02e2124f87d6f0a56
-cp %{_builddir}/gnutls-3.7.2/doc/COPYING.LESSER %{buildroot}/usr/share/package-licenses/gnutls/545f380fb332eb41236596500913ff8d582e3ead
-cp %{_builddir}/gnutls-3.7.2/doc/examples/tlsproxy/LICENSE %{buildroot}/usr/share/package-licenses/gnutls/06407f2dacc5ba7cbae1b6120c6a57379969a6f3
-cp %{_builddir}/gnutls-3.7.2/lib/accelerated/x86/license.txt %{buildroot}/usr/share/package-licenses/gnutls/54c70759aa4b060ff33b7412fa6f38480fc840b2
-cp %{_builddir}/gnutls-3.7.2/lib/inih/LICENSE.txt %{buildroot}/usr/share/package-licenses/gnutls/d097282eb6f05d825f591cef06bac3654b58feba
-cp %{_builddir}/gnutls-3.7.2/src/libopts/COPYING.gplv3 %{buildroot}/usr/share/package-licenses/gnutls/a8573c5c670d8a150d41fbde33d79e8e49d2a9fa
-cp %{_builddir}/gnutls-3.7.2/src/libopts/COPYING.lgplv3 %{buildroot}/usr/share/package-licenses/gnutls/8ca3cbd336e9a13d5ee05753567d9261af4066a3
-cp %{_builddir}/gnutls-3.7.2/src/libopts/COPYING.mbsd %{buildroot}/usr/share/package-licenses/gnutls/76f15ccf78ed039d563200c8db64f85d17c3d7cb
+cp %{_builddir}/gnutls-3.7.3/LICENSE %{buildroot}/usr/share/package-licenses/gnutls/1f511bc8132f3904e090af21d25ef3453314b910
+cp %{_builddir}/gnutls-3.7.3/doc/COPYING %{buildroot}/usr/share/package-licenses/gnutls/0dd432edfab90223f22e49c02e2124f87d6f0a56
+cp %{_builddir}/gnutls-3.7.3/doc/COPYING.LESSER %{buildroot}/usr/share/package-licenses/gnutls/545f380fb332eb41236596500913ff8d582e3ead
+cp %{_builddir}/gnutls-3.7.3/doc/examples/tlsproxy/LICENSE %{buildroot}/usr/share/package-licenses/gnutls/06407f2dacc5ba7cbae1b6120c6a57379969a6f3
+cp %{_builddir}/gnutls-3.7.3/lib/accelerated/x86/license.txt %{buildroot}/usr/share/package-licenses/gnutls/54c70759aa4b060ff33b7412fa6f38480fc840b2
+cp %{_builddir}/gnutls-3.7.3/lib/inih/LICENSE.txt %{buildroot}/usr/share/package-licenses/gnutls/d097282eb6f05d825f591cef06bac3654b58feba
 pushd ../build32/
 %make_install32
 if [ -d  %{buildroot}/usr/lib32/pkgconfig ]
 then
 pushd %{buildroot}/usr/lib32/pkgconfig
+for i in *.pc ; do ln -s $i 32$i ; done
+popd
+fi
+if [ -d %{buildroot}/usr/share/pkgconfig ]
+then
+pushd %{buildroot}/usr/share/pkgconfig
 for i in *.pc ; do ln -s $i 32$i ; done
 popd
 fi
@@ -457,6 +463,7 @@ popd
 /usr/share/man/man3/gnutls_digest_get_name.3
 /usr/share/man/man3/gnutls_digest_get_oid.3
 /usr/share/man/man3/gnutls_digest_list.3
+/usr/share/man/man3/gnutls_digest_set_secure.3
 /usr/share/man/man3/gnutls_dtls_cookie_send.3
 /usr/share/man/man3/gnutls_dtls_cookie_verify.3
 /usr/share/man/man3/gnutls_dtls_get_data_mtu.3
@@ -475,6 +482,7 @@ popd
 /usr/share/man/man3/gnutls_ecc_curve_get_pk.3
 /usr/share/man/man3/gnutls_ecc_curve_get_size.3
 /usr/share/man/man3/gnutls_ecc_curve_list.3
+/usr/share/man/man3/gnutls_ecc_curve_set_enabled.3
 /usr/share/man/man3/gnutls_encode_ber_digest_info.3
 /usr/share/man/man3/gnutls_encode_gost_rs_value.3
 /usr/share/man/man3/gnutls_encode_rs_value.3
@@ -489,8 +497,14 @@ popd
 /usr/share/man/man3/gnutls_ext_register.3
 /usr/share/man/man3/gnutls_ext_set_data.3
 /usr/share/man/man3/gnutls_fingerprint.3
+/usr/share/man/man3/gnutls_fips140_context_deinit.3
+/usr/share/man/man3/gnutls_fips140_context_init.3
+/usr/share/man/man3/gnutls_fips140_get_operation_state.3
 /usr/share/man/man3/gnutls_fips140_mode_enabled.3
+/usr/share/man/man3/gnutls_fips140_pop_context.3
+/usr/share/man/man3/gnutls_fips140_push_context.3
 /usr/share/man/man3/gnutls_fips140_set_mode.3
+/usr/share/man/man3/gnutls_get_library_config.3
 /usr/share/man/man3/gnutls_get_system_config_file.3
 /usr/share/man/man3/gnutls_global_deinit.3
 /usr/share/man/man3/gnutls_global_init.3
@@ -835,6 +849,7 @@ popd
 /usr/share/man/man3/gnutls_protocol_get_name.3
 /usr/share/man/man3/gnutls_protocol_get_version.3
 /usr/share/man/man3/gnutls_protocol_list.3
+/usr/share/man/man3/gnutls_protocol_set_enabled.3
 /usr/share/man/man3/gnutls_psk_allocate_client_credentials.3
 /usr/share/man/man3/gnutls_psk_allocate_server_credentials.3
 /usr/share/man/man3/gnutls_psk_client_get_hint.3
@@ -982,6 +997,8 @@ popd
 /usr/share/man/man3/gnutls_sign_is_secure.3
 /usr/share/man/man3/gnutls_sign_is_secure2.3
 /usr/share/man/man3/gnutls_sign_list.3
+/usr/share/man/man3/gnutls_sign_set_secure.3
+/usr/share/man/man3/gnutls_sign_set_secure_for_certs.3
 /usr/share/man/man3/gnutls_sign_supports_pk_algorithm.3
 /usr/share/man/man3/gnutls_srp_allocate_client_credentials.3
 /usr/share/man/man3/gnutls_srp_allocate_server_credentials.3
@@ -1038,6 +1055,7 @@ popd
 /usr/share/man/man3/gnutls_transport_get_int2.3
 /usr/share/man/man3/gnutls_transport_get_ptr.3
 /usr/share/man/man3/gnutls_transport_get_ptr2.3
+/usr/share/man/man3/gnutls_transport_is_ktls_enabled.3
 /usr/share/man/man3/gnutls_transport_set_errno.3
 /usr/share/man/man3/gnutls_transport_set_errno_function.3
 /usr/share/man/man3/gnutls_transport_set_fastopen.3
@@ -1294,6 +1312,8 @@ popd
 /usr/share/man/man3/gnutls_x509_crt_sign2.3
 /usr/share/man/man3/gnutls_x509_crt_verify.3
 /usr/share/man/man3/gnutls_x509_crt_verify_data2.3
+/usr/share/man/man3/gnutls_x509_ct_sct_get.3
+/usr/share/man/man3/gnutls_x509_ct_sct_get_version.3
 /usr/share/man/man3/gnutls_x509_dn_deinit.3
 /usr/share/man/man3/gnutls_x509_dn_export.3
 /usr/share/man/man3/gnutls_x509_dn_export2.3
@@ -1305,6 +1325,10 @@ popd
 /usr/share/man/man3/gnutls_x509_dn_oid_known.3
 /usr/share/man/man3/gnutls_x509_dn_oid_name.3
 /usr/share/man/man3/gnutls_x509_dn_set_str.3
+/usr/share/man/man3/gnutls_x509_ext_ct_export_scts.3
+/usr/share/man/man3/gnutls_x509_ext_ct_import_scts.3
+/usr/share/man/man3/gnutls_x509_ext_ct_scts_deinit.3
+/usr/share/man/man3/gnutls_x509_ext_ct_scts_init.3
 /usr/share/man/man3/gnutls_x509_ext_deinit.3
 /usr/share/man/man3/gnutls_x509_ext_export_aia.3
 /usr/share/man/man3/gnutls_x509_ext_export_authority_key_id.3
@@ -1469,12 +1493,12 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libgnutls.so.30
-/usr/lib64/libgnutls.so.30.30.0
+/usr/lib64/libgnutls.so.30.31.0
 
 %files lib32
 %defattr(-,root,root,-)
 /usr/lib32/libgnutls.so.30
-/usr/lib32/libgnutls.so.30.30.0
+/usr/lib32/libgnutls.so.30.31.0
 /usr/lib32/libgnutlsxx.so.28
 /usr/lib32/libgnutlsxx.so.28.1.0
 
@@ -1485,9 +1509,6 @@ popd
 /usr/share/package-licenses/gnutls/1f511bc8132f3904e090af21d25ef3453314b910
 /usr/share/package-licenses/gnutls/545f380fb332eb41236596500913ff8d582e3ead
 /usr/share/package-licenses/gnutls/54c70759aa4b060ff33b7412fa6f38480fc840b2
-/usr/share/package-licenses/gnutls/76f15ccf78ed039d563200c8db64f85d17c3d7cb
-/usr/share/package-licenses/gnutls/8ca3cbd336e9a13d5ee05753567d9261af4066a3
-/usr/share/package-licenses/gnutls/a8573c5c670d8a150d41fbde33d79e8e49d2a9fa
 /usr/share/package-licenses/gnutls/d097282eb6f05d825f591cef06bac3654b58feba
 
 %files man

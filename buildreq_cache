@@ -1,6 +1,5 @@
-3.7.2
+3.7.3
 glibc-locale
-intltool-dev
 libseccomp-dev
 pkg-config
 valgrind-dev

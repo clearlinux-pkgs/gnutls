@@ -11,8 +11,6 @@ Configure miss: Solaris 11.4 locale system
 Configure miss: Solaris 11.4 locale system
 Configure miss: __mktime_internal
 Configure miss: __mktime_internal
-Configure miss: autogen
-Configure miss: autogen
 Configure miss: compiler option needed when checking for declarations
 Configure miss: compiler option needed when checking for declarations
 Configure miss: crtdefs.h
@@ -23,8 +21,6 @@ Configure miss: g++ option to enable C++11 features
 Configure miss: g++ option to enable C++11 features
 Configure miss: getentropy
 Configure miss: getentropy
-Configure miss: gettext in -lintl
-Configure miss: gettext in -lintl
 Configure miss: if gcc/ld supports -Wl,--output-def
 Configure miss: if gcc/ld supports -Wl,--output-def
 Configure miss: ioctl with POSIX signature
@@ -50,48 +46,22 @@ Configure miss: nettle_kuznyechik_set_key
 Configure miss: nettle_kuznyechik_set_key
 Configure miss: nettle_magma_set_key
 Configure miss: nettle_magma_set_key
-Configure miss: pathfind in -lgen
-Configure miss: pathfind in -lgen
 Configure miss: pstat_getprocvm
 Configure miss: pstat_getprocvm
-Configure miss: runetype.h
-Configure miss: runetype.h
 Configure miss: strerror_r with POSIX signature
 Configure miss: strerror_r with POSIX signature
-Configure miss: sys/procset.h
-Configure miss: sys/procset.h
-Configure miss: sys/procset.h presence
-Configure miss: sys/procset.h presence
-Configure miss: sys/procset.h usability
-Configure miss: sys/procset.h usability
-Configure miss: sys/stropts.h
-Configure miss: sys/stropts.h
-Configure miss: sys/stropts.h presence
-Configure miss: sys/stropts.h presence
-Configure miss: sys/stropts.h usability
-Configure miss: sys/stropts.h usability
 Configure miss: timezone_t
 Configure miss: timezone_t
-Configure miss: tss library
-Configure miss: tss library
-Configure miss: uint_t
-Configure miss: uint_t
 Configure miss: unbound library
 Configure miss: unbound library
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether INT64_MAX == LONG_MAX
 Configure miss: whether UINT64_MAX == ULONG_MAX
-Configure miss: whether a reg expr header is specified
-Configure miss: whether a reg expr header is specified
-Configure miss: whether autoopts-config can be found... checking whether autoopts-config is specified
-Configure miss: whether autoopts-config can be found... checking whether autoopts-config is specified
 Configure miss: whether building Guile bindings
 Configure miss: whether building Guile bindings
 Configure miss: whether gai_strerrorA is declared
 Configure miss: whether gai_strerrorA is declared
-Configure miss: whether pathfind(3) works
-Configure miss: whether pathfind(3) works
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_sigmask is a macro
@@ -102,6 +72,8 @@ Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether to add AF_ALG support
 Configure miss: whether to add AF_ALG support
+Configure miss: whether to add KTLS support
+Configure miss: whether to add KTLS support
 Configure miss: whether to add cryptodev support
 Configure miss: whether to add cryptodev support
 Configure miss: whether to build OpenSSL compatibility layer
@@ -130,12 +102,4 @@ Configure miss: whether to disable the SSL 2.0 client hello
 Configure miss: whether to disable the SSL 2.0 client hello
 Configure miss: whether to use the included minitasn1
 Configure miss: whether to use the included minitasn1
-Configure miss: whether valgrind works on executables produced by the compiler
-Configure miss: whether valgrind works on executables produced by the compiler
-Configure miss: whether with-libregex was specified
-Configure miss: whether with-libregex was specified
-Configure miss: whether with-libregex-cflags was specified
-Configure miss: whether with-libregex-cflags was specified
-Configure miss: whether with-libregex-libs was specified
-Configure miss: whether with-libregex-libs was specified
 Configure miss: working nanosleep

@@ -1,2 +1,4 @@
 --enable-guile=no
 --with-default-trust-store-dir=/var/cache/ca-certs/anchors
+--without-tpm
+--without-tpm2

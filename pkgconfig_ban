@@ -2,3 +2,9 @@
 # but are undesirable. One entry per line, no whitespace.
 32cmocka
 cmocka
+32tss2-esys
+tss2-esys
+32tss2-mu
+tss2-mu
+32tss2-tctildr
+tss2-tctildr
