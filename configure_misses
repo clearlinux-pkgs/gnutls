@@ -3,10 +3,12 @@ Configure miss: CFLocaleCopyPreferredLanguages
 Configure miss: CFLocaleCopyPreferredLanguages
 Configure miss: CMOCKA
 Configure miss: CMOCKA
-Configure miss: GTKDOC_DEPS
-Configure miss: GTKDOC_DEPS
 Configure miss: KERN_ARND
 Configure miss: KERN_ARND
+Configure miss: LIBBROTLIDEC
+Configure miss: LIBBROTLIDEC
+Configure miss: LIBBROTLIENC
+Configure miss: LIBBROTLIENC
 Configure miss: Solaris 11.4 locale system
 Configure miss: Solaris 11.4 locale system
 Configure miss: __mktime_internal

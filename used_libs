@@ -7,3 +7,4 @@ libnettle.so.8
 libp11-kit.so.0
 libtasn1.so.6
 libunistring.so.2
+libz.so.1
