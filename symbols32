@@ -15,6 +15,7 @@ libgnutls.so.30:GNUTLS_3_7_0
 libgnutls.so.30:GNUTLS_3_7_2
 libgnutls.so.30:GNUTLS_3_7_3
 libgnutls.so.30:GNUTLS_3_7_4
+libgnutls.so.30:GNUTLS_3_7_5
 libgnutls.so.30:GNUTLS_FIPS140_3_4
 libgnutls.so.30:GNUTLS_PRIVATE_3_4
 libgnutls.so.30:_dsa_generate_dss_g
@@ -76,6 +77,7 @@ libgnutls.so.30:gnutls_aead_cipher_encrypt
 libgnutls.so.30:gnutls_aead_cipher_encryptv
 libgnutls.so.30:gnutls_aead_cipher_encryptv2
 libgnutls.so.30:gnutls_aead_cipher_init
+libgnutls.so.30:gnutls_aead_cipher_set_key
 libgnutls.so.30:gnutls_alert_get
 libgnutls.so.30:gnutls_alert_get_name
 libgnutls.so.30:gnutls_alert_get_strname
