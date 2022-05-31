@@ -3,6 +3,8 @@ Configure miss: CFLocaleCopyPreferredLanguages
 Configure miss: CFLocaleCopyPreferredLanguages
 Configure miss: CMOCKA
 Configure miss: CMOCKA
+Configure miss: GTKDOC_DEPS
+Configure miss: GTKDOC_DEPS
 Configure miss: KERN_ARND
 Configure miss: KERN_ARND
 Configure miss: LIBBROTLIDEC
