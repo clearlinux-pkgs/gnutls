@@ -16,6 +16,7 @@ libgnutls.so.30:GNUTLS_3_7_2
 libgnutls.so.30:GNUTLS_3_7_3
 libgnutls.so.30:GNUTLS_3_7_4
 libgnutls.so.30:GNUTLS_3_7_5
+libgnutls.so.30:GNUTLS_3_7_7
 libgnutls.so.30:GNUTLS_FIPS140_3_4
 libgnutls.so.30:GNUTLS_PRIVATE_3_4
 libgnutls.so.30:_dsa_generate_dss_g
@@ -187,9 +188,11 @@ libgnutls.so.30:gnutls_check_version
 libgnutls.so.30:gnutls_cipher_add_auth
 libgnutls.so.30:gnutls_cipher_decrypt
 libgnutls.so.30:gnutls_cipher_decrypt2
+libgnutls.so.30:gnutls_cipher_decrypt3
 libgnutls.so.30:gnutls_cipher_deinit
 libgnutls.so.30:gnutls_cipher_encrypt
 libgnutls.so.30:gnutls_cipher_encrypt2
+libgnutls.so.30:gnutls_cipher_encrypt3
 libgnutls.so.30:gnutls_cipher_get
 libgnutls.so.30:gnutls_cipher_get_block_size
 libgnutls.so.30:gnutls_cipher_get_id
@@ -296,6 +299,7 @@ libgnutls.so.30:gnutls_fips140_get_operation_state
 libgnutls.so.30:gnutls_fips140_mode_enabled
 libgnutls.so.30:gnutls_fips140_pop_context
 libgnutls.so.30:gnutls_fips140_push_context
+libgnutls.so.30:gnutls_fips140_run_self_tests
 libgnutls.so.30:gnutls_fips140_set_mode
 libgnutls.so.30:gnutls_get_library_config
 libgnutls.so.30:gnutls_get_system_config_file

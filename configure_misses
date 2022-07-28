@@ -23,8 +23,11 @@ Configure miss: fake locale system (OpenBSD)
 Configure miss: fake locale system (OpenBSD)
 Configure miss: g++ option to enable C++11 features
 Configure miss: g++ option to enable C++11 features
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: getentropy
 Configure miss: getentropy
+Configure miss: i686-generic-linux-gnu-file
 Configure miss: if gcc/ld supports -Wl,--output-def
 Configure miss: if gcc/ld supports -Wl,--output-def
 Configure miss: ioctl with POSIX signature
@@ -107,3 +110,4 @@ Configure miss: whether to disable the SSL 2.0 client hello
 Configure miss: whether to use the included minitasn1
 Configure miss: whether to use the included minitasn1
 Configure miss: working nanosleep
+Configure miss: x86_64-generic-linux-gnu-file
