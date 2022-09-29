@@ -76,8 +76,6 @@ Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether to add AF_ALG support
 Configure miss: whether to add AF_ALG support
-Configure miss: whether to add KTLS support
-Configure miss: whether to add KTLS support
 Configure miss: whether to add cryptodev support
 Configure miss: whether to add cryptodev support
 Configure miss: whether to build OpenSSL compatibility layer

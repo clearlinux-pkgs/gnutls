@@ -2,3 +2,4 @@
 --with-default-trust-store-dir=/var/cache/ca-certs/anchors
 --without-tpm
 --without-tpm2
+--enable-ktls

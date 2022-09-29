@@ -6,7 +6,7 @@
 #
 Name     : gnutls
 Version  : 3.7.8
-Release  : 75
+Release  : 76
 URL      : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.8.tar.xz
 Source0  : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.8.tar.xz
 Source1  : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.8.tar.xz.sig
@@ -181,7 +181,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1664315068
+export SOURCE_DATE_EPOCH=1664460465
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -Ofast -falign-functions=32 -fno-lto -fno-semantic-interposition -fstack-protector-strong -fzero-call-used-regs=used -mprefer-vector-width=256 "
 export FCFLAGS="$FFLAGS -Ofast -falign-functions=32 -fno-lto -fno-semantic-interposition -fstack-protector-strong -fzero-call-used-regs=used -mprefer-vector-width=256 "
@@ -190,7 +190,8 @@ export CXXFLAGS="$CXXFLAGS -Ofast -falign-functions=32 -fno-lto -fno-semantic-in
 %configure --disable-static --enable-guile=no \
 --with-default-trust-store-dir=/var/cache/ca-certs/anchors \
 --without-tpm \
---without-tpm2
+--without-tpm2 \
+--enable-ktls
 make  %{?_smp_mflags}
 
 pushd ../build32/
@@ -202,7 +203,8 @@ export LDFLAGS="${LDFLAGS}${LDFLAGS:+ }-m32 -mstackrealign"
 %configure --disable-static --enable-guile=no \
 --with-default-trust-store-dir=/var/cache/ca-certs/anchors \
 --without-tpm \
---without-tpm2   --libdir=/usr/lib32 --build=i686-generic-linux-gnu --host=i686-generic-linux-gnu --target=i686-clr-linux-gnu
+--without-tpm2 \
+--enable-ktls   --libdir=/usr/lib32 --build=i686-generic-linux-gnu --host=i686-generic-linux-gnu --target=i686-clr-linux-gnu
 make  %{?_smp_mflags}
 popd
 %check
@@ -215,15 +217,15 @@ cd ../build32;
 make %{?_smp_mflags} check || : || :
 
 %install
-export SOURCE_DATE_EPOCH=1664315068
+export SOURCE_DATE_EPOCH=1664460465
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gnutls
-cp %{_builddir}/gnutls-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/gnutls/1f511bc8132f3904e090af21d25ef3453314b910
-cp %{_builddir}/gnutls-%{version}/doc/COPYING %{buildroot}/usr/share/package-licenses/gnutls/0dd432edfab90223f22e49c02e2124f87d6f0a56
-cp %{_builddir}/gnutls-%{version}/doc/COPYING.LESSER %{buildroot}/usr/share/package-licenses/gnutls/545f380fb332eb41236596500913ff8d582e3ead
-cp %{_builddir}/gnutls-%{version}/doc/examples/tlsproxy/LICENSE %{buildroot}/usr/share/package-licenses/gnutls/06407f2dacc5ba7cbae1b6120c6a57379969a6f3
-cp %{_builddir}/gnutls-%{version}/lib/accelerated/x86/license.txt %{buildroot}/usr/share/package-licenses/gnutls/54c70759aa4b060ff33b7412fa6f38480fc840b2
-cp %{_builddir}/gnutls-%{version}/lib/inih/LICENSE.txt %{buildroot}/usr/share/package-licenses/gnutls/d097282eb6f05d825f591cef06bac3654b58feba
+cp %{_builddir}/gnutls-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/gnutls/1f511bc8132f3904e090af21d25ef3453314b910 || :
+cp %{_builddir}/gnutls-%{version}/doc/COPYING %{buildroot}/usr/share/package-licenses/gnutls/0dd432edfab90223f22e49c02e2124f87d6f0a56 || :
+cp %{_builddir}/gnutls-%{version}/doc/COPYING.LESSER %{buildroot}/usr/share/package-licenses/gnutls/545f380fb332eb41236596500913ff8d582e3ead || :
+cp %{_builddir}/gnutls-%{version}/doc/examples/tlsproxy/LICENSE %{buildroot}/usr/share/package-licenses/gnutls/06407f2dacc5ba7cbae1b6120c6a57379969a6f3 || :
+cp %{_builddir}/gnutls-%{version}/lib/accelerated/x86/license.txt %{buildroot}/usr/share/package-licenses/gnutls/54c70759aa4b060ff33b7412fa6f38480fc840b2 || :
+cp %{_builddir}/gnutls-%{version}/lib/inih/LICENSE.txt %{buildroot}/usr/share/package-licenses/gnutls/d097282eb6f05d825f591cef06bac3654b58feba || :
 pushd ../build32/
 %make_install32
 if [ -d  %{buildroot}/usr/lib32/pkgconfig ]
