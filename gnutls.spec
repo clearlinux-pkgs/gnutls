@@ -6,7 +6,7 @@
 #
 Name     : gnutls
 Version  : 3.7.8
-Release  : 78
+Release  : 79
 URL      : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.8.tar.xz
 Source0  : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.8.tar.xz
 Source1  : https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.8.tar.xz.sig
