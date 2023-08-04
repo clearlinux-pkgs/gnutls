@@ -1,111 +1,166 @@
 Configure miss: 32-bit host C ABI
+Configure miss: 32-bit host C ABI
+Configure miss: CFLocaleCopyPreferredLanguages
 Configure miss: CFLocaleCopyPreferredLanguages
 Configure miss: CFLocaleCopyPreferredLanguages
 Configure miss: CMOCKA
 Configure miss: CMOCKA
+Configure miss: CMOCKA
+Configure miss: GTKDOC_DEPS
 Configure miss: GTKDOC_DEPS
 Configure miss: GTKDOC_DEPS
 Configure miss: KERN_ARND
 Configure miss: KERN_ARND
+Configure miss: KERN_ARND
+Configure miss: LIBBROTLIDEC
 Configure miss: LIBBROTLIDEC
 Configure miss: LIBBROTLIDEC
 Configure miss: LIBBROTLIENC
 Configure miss: LIBBROTLIENC
+Configure miss: LIBBROTLIENC
+Configure miss: Solaris 11.4 locale system
 Configure miss: Solaris 11.4 locale system
 Configure miss: Solaris 11.4 locale system
 Configure miss: __mktime_internal
 Configure miss: __mktime_internal
+Configure miss: __mktime_internal
+Configure miss: compiler option needed when checking for declarations
 Configure miss: compiler option needed when checking for declarations
 Configure miss: compiler option needed when checking for declarations
 Configure miss: crtdefs.h
 Configure miss: crtdefs.h
+Configure miss: crtdefs.h
+Configure miss: fake locale system (OpenBSD)
 Configure miss: fake locale system (OpenBSD)
 Configure miss: fake locale system (OpenBSD)
 Configure miss: g++ option to enable C++11 features
 Configure miss: g++ option to enable C++11 features
+Configure miss: g++ option to enable C++11 features
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: getentropy
 Configure miss: getentropy
 Configure miss: getentropy
 Configure miss: i686-generic-linux-gnu-file
 Configure miss: if gcc/ld supports -Wl,--output-def
 Configure miss: if gcc/ld supports -Wl,--output-def
+Configure miss: if gcc/ld supports -Wl,--output-def
+Configure miss: ioctl with POSIX signature
 Configure miss: ioctl with POSIX signature
 Configure miss: ioctl with POSIX signature
 Configure miss: libcrypto
 Configure miss: libcrypto
+Configure miss: libcrypto
 Configure miss: libev
 Configure miss: libev
+Configure miss: libev
+Configure miss: library needed for semaphore functions
 Configure miss: library needed for semaphore functions
 Configure miss: library needed for semaphore functions
 Configure miss: libseccomp
 Configure miss: memset_s
 Configure miss: memset_s
+Configure miss: memset_s
+Configure miss: mquery
 Configure miss: mquery
 Configure miss: mquery
 Configure miss: nettle_cmac_kuznyechik_update
 Configure miss: nettle_cmac_kuznyechik_update
+Configure miss: nettle_cmac_kuznyechik_update
+Configure miss: nettle_cmac_magma_update
 Configure miss: nettle_cmac_magma_update
 Configure miss: nettle_cmac_magma_update
 Configure miss: nettle_gost28147_set_key
 Configure miss: nettle_gost28147_set_key
+Configure miss: nettle_gost28147_set_key
+Configure miss: nettle_kuznyechik_set_key
 Configure miss: nettle_kuznyechik_set_key
 Configure miss: nettle_kuznyechik_set_key
 Configure miss: nettle_magma_set_key
 Configure miss: nettle_magma_set_key
+Configure miss: nettle_magma_set_key
+Configure miss: pstat_getprocvm
 Configure miss: pstat_getprocvm
 Configure miss: pstat_getprocvm
 Configure miss: strerror_r with POSIX signature
 Configure miss: strerror_r with POSIX signature
+Configure miss: strerror_r with POSIX signature
+Configure miss: timezone_t
 Configure miss: timezone_t
 Configure miss: timezone_t
 Configure miss: unbound library
 Configure miss: unbound library
+Configure miss: unbound library
+Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether INT64_MAX == LONG_MAX
 Configure miss: whether UINT64_MAX == ULONG_MAX
 Configure miss: whether building Guile bindings
 Configure miss: whether building Guile bindings
+Configure miss: whether building Guile bindings
+Configure miss: whether gai_strerrorA is declared
 Configure miss: whether gai_strerrorA is declared
 Configure miss: whether gai_strerrorA is declared
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
+Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
+Configure miss: whether pthread_sigmask is a macro
 Configure miss: whether pthread_sigmask is a macro
 Configure miss: whether pthread_sigmask is a macro
 Configure miss: whether the compiler is clang
 Configure miss: whether the compiler is clang
+Configure miss: whether the compiler is clang
+Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether to add AF_ALG support
 Configure miss: whether to add AF_ALG support
+Configure miss: whether to add AF_ALG support
+Configure miss: whether to add cryptodev support
 Configure miss: whether to add cryptodev support
 Configure miss: whether to add cryptodev support
 Configure miss: whether to build OpenSSL compatibility layer
 Configure miss: whether to build OpenSSL compatibility layer
+Configure miss: whether to build OpenSSL compatibility layer
+Configure miss: whether to disable ALPN extension
 Configure miss: whether to disable ALPN extension
 Configure miss: whether to disable ALPN extension
 Configure miss: whether to disable DHE support
 Configure miss: whether to disable DHE support
+Configure miss: whether to disable DHE support
+Configure miss: whether to disable DTLS-SRTP extension
 Configure miss: whether to disable DTLS-SRTP extension
 Configure miss: whether to disable DTLS-SRTP extension
 Configure miss: whether to disable ECDHE support
 Configure miss: whether to disable ECDHE support
+Configure miss: whether to disable ECDHE support
+Configure miss: whether to disable GOST support
 Configure miss: whether to disable GOST support
 Configure miss: whether to disable GOST support
 Configure miss: whether to disable OCSP support
 Configure miss: whether to disable OCSP support
+Configure miss: whether to disable OCSP support
+Configure miss: whether to disable PSK authentication support
 Configure miss: whether to disable PSK authentication support
 Configure miss: whether to disable PSK authentication support
 Configure miss: whether to disable SRP authentication support
 Configure miss: whether to disable SRP authentication support
+Configure miss: whether to disable SRP authentication support
+Configure miss: whether to disable anonymous authentication support
 Configure miss: whether to disable anonymous authentication support
 Configure miss: whether to disable anonymous authentication support
 Configure miss: whether to disable strict DER time encodings for backwards compatibility
 Configure miss: whether to disable strict DER time encodings for backwards compatibility
+Configure miss: whether to disable strict DER time encodings for backwards compatibility
 Configure miss: whether to disable the SSL 2.0 client hello
 Configure miss: whether to disable the SSL 2.0 client hello
+Configure miss: whether to disable the SSL 2.0 client hello
+Configure miss: whether to use the included minitasn1
 Configure miss: whether to use the included minitasn1
 Configure miss: whether to use the included minitasn1
 Configure miss: working nanosleep
+Configure miss: working nanosleep
+Configure miss: x86_64-generic-linux-gnu-file
 Configure miss: x86_64-generic-linux-gnu-file
