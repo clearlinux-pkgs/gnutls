@@ -24,18 +24,29 @@ Configure miss: Solaris 11.4 locale system
 Configure miss: __mktime_internal
 Configure miss: __mktime_internal
 Configure miss: __mktime_internal
+Configure miss: bool, true, false
+Configure miss: bool, true, false
+Configure miss: bool, true, false
 Configure miss: compiler option needed when checking for declarations
 Configure miss: compiler option needed when checking for declarations
 Configure miss: compiler option needed when checking for declarations
 Configure miss: crtdefs.h
 Configure miss: crtdefs.h
 Configure miss: crtdefs.h
+Configure miss: explicit_memset
+Configure miss: explicit_memset
+Configure miss: explicit_memset
 Configure miss: fake locale system (OpenBSD)
 Configure miss: fake locale system (OpenBSD)
 Configure miss: fake locale system (OpenBSD)
+Configure miss: faketime
+Configure miss: faketime
+Configure miss: faketime
 Configure miss: g++ option to enable C++11 features
 Configure miss: g++ option to enable C++11 features
 Configure miss: g++ option to enable C++11 features
+Configure miss: gcc option to enable large file support
+Configure miss: gcc option to enable large file support
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gcc options needed to detect all undeclared functions
@@ -59,6 +70,9 @@ Configure miss: library needed for semaphore functions
 Configure miss: library needed for semaphore functions
 Configure miss: library needed for semaphore functions
 Configure miss: libseccomp
+Configure miss: memset_explicit
+Configure miss: memset_explicit
+Configure miss: memset_explicit
 Configure miss: memset_s
 Configure miss: memset_s
 Configure miss: memset_s
@@ -83,6 +97,9 @@ Configure miss: nettle_magma_set_key
 Configure miss: pstat_getprocvm
 Configure miss: pstat_getprocvm
 Configure miss: pstat_getprocvm
+Configure miss: stdckdint.h
+Configure miss: stdckdint.h
+Configure miss: stdckdint.h
 Configure miss: strerror_r with POSIX signature
 Configure miss: strerror_r with POSIX signature
 Configure miss: strerror_r with POSIX signature
@@ -97,9 +114,9 @@ Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether INT64_MAX == LONG_MAX
 Configure miss: whether UINT64_MAX == ULONG_MAX
-Configure miss: whether building Guile bindings
-Configure miss: whether building Guile bindings
-Configure miss: whether building Guile bindings
+Configure miss: whether ctype.h defines __header_inline
+Configure miss: whether ctype.h defines __header_inline
+Configure miss: whether ctype.h defines __header_inline
 Configure miss: whether gai_strerrorA is declared
 Configure miss: whether gai_strerrorA is declared
 Configure miss: whether gai_strerrorA is declared
@@ -145,9 +162,6 @@ Configure miss: whether to disable OCSP support
 Configure miss: whether to disable PSK authentication support
 Configure miss: whether to disable PSK authentication support
 Configure miss: whether to disable PSK authentication support
-Configure miss: whether to disable SRP authentication support
-Configure miss: whether to disable SRP authentication support
-Configure miss: whether to disable SRP authentication support
 Configure miss: whether to disable anonymous authentication support
 Configure miss: whether to disable anonymous authentication support
 Configure miss: whether to disable anonymous authentication support
@@ -157,6 +171,12 @@ Configure miss: whether to disable strict DER time encodings for backwards compa
 Configure miss: whether to disable the SSL 2.0 client hello
 Configure miss: whether to disable the SSL 2.0 client hello
 Configure miss: whether to disable the SSL 2.0 client hello
+Configure miss: whether to enable SRP authentication support
+Configure miss: whether to enable SRP authentication support
+Configure miss: whether to enable SRP authentication support
+Configure miss: whether to enable TLS heartbeat support
+Configure miss: whether to enable TLS heartbeat support
+Configure miss: whether to enable TLS heartbeat support
 Configure miss: whether to use the included minitasn1
 Configure miss: whether to use the included minitasn1
 Configure miss: whether to use the included minitasn1
