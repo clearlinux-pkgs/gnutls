@@ -3,21 +3,9 @@ Configure miss: 32-bit host C ABI
 Configure miss: CFLocaleCopyPreferredLanguages
 Configure miss: CFLocaleCopyPreferredLanguages
 Configure miss: CFLocaleCopyPreferredLanguages
-Configure miss: CMOCKA
-Configure miss: CMOCKA
-Configure miss: CMOCKA
-Configure miss: GTKDOC_DEPS
-Configure miss: GTKDOC_DEPS
-Configure miss: GTKDOC_DEPS
 Configure miss: KERN_ARND
 Configure miss: KERN_ARND
 Configure miss: KERN_ARND
-Configure miss: LIBBROTLIDEC
-Configure miss: LIBBROTLIDEC
-Configure miss: LIBBROTLIDEC
-Configure miss: LIBBROTLIENC
-Configure miss: LIBBROTLIENC
-Configure miss: LIBBROTLIENC
 Configure miss: Solaris 11.4 locale system
 Configure miss: Solaris 11.4 locale system
 Configure miss: Solaris 11.4 locale system
@@ -27,6 +15,9 @@ Configure miss: __mktime_internal
 Configure miss: bool, true, false
 Configure miss: bool, true, false
 Configure miss: bool, true, false
+Configure miss: cmocka >= 1.0.1
+Configure miss: cmocka >= 1.0.1
+Configure miss: cmocka >= 1.0.1
 Configure miss: compiler option needed when checking for declarations
 Configure miss: compiler option needed when checking for declarations
 Configure miss: compiler option needed when checking for declarations
@@ -53,6 +44,9 @@ Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: getentropy
 Configure miss: getentropy
 Configure miss: getentropy
+Configure miss: glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0
+Configure miss: glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0
+Configure miss: glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0
 Configure miss: i686-generic-linux-gnu-file
 Configure miss: if gcc/ld supports -Wl,--output-def
 Configure miss: if gcc/ld supports -Wl,--output-def
@@ -60,6 +54,12 @@ Configure miss: if gcc/ld supports -Wl,--output-def
 Configure miss: ioctl with POSIX signature
 Configure miss: ioctl with POSIX signature
 Configure miss: ioctl with POSIX signature
+Configure miss: libbrotlidec >= 1.0.0
+Configure miss: libbrotlidec >= 1.0.0
+Configure miss: libbrotlidec >= 1.0.0
+Configure miss: libbrotlienc >= 1.0.0
+Configure miss: libbrotlienc >= 1.0.0
+Configure miss: libbrotlienc >= 1.0.0
 Configure miss: libcrypto
 Configure miss: libcrypto
 Configure miss: libcrypto
