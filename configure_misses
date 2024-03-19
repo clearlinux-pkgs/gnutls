@@ -94,6 +94,9 @@ Configure miss: nettle_kuznyechik_set_key
 Configure miss: nettle_magma_set_key
 Configure miss: nettle_magma_set_key
 Configure miss: nettle_magma_set_key
+Configure miss: nettle_rsa_oaep_sha256_encrypt
+Configure miss: nettle_rsa_oaep_sha256_encrypt
+Configure miss: nettle_rsa_oaep_sha256_encrypt
 Configure miss: pstat_getprocvm
 Configure miss: pstat_getprocvm
 Configure miss: pstat_getprocvm
