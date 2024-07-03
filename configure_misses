@@ -100,9 +100,6 @@ Configure miss: nettle_rsa_oaep_sha256_encrypt
 Configure miss: pstat_getprocvm
 Configure miss: pstat_getprocvm
 Configure miss: pstat_getprocvm
-Configure miss: stdckdint.h
-Configure miss: stdckdint.h
-Configure miss: stdckdint.h
 Configure miss: strerror_r with POSIX signature
 Configure miss: strerror_r with POSIX signature
 Configure miss: strerror_r with POSIX signature
