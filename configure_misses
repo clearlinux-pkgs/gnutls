@@ -12,9 +12,18 @@ Configure miss: Solaris 11.4 locale system
 Configure miss: __mktime_internal
 Configure miss: __mktime_internal
 Configure miss: __mktime_internal
+Configure miss: _fseeki64
+Configure miss: _fseeki64
+Configure miss: _fseeki64
 Configure miss: bool, true, false
 Configure miss: bool, true, false
 Configure miss: bool, true, false
+Configure miss: brotlidec soname
+Configure miss: brotlidec soname
+Configure miss: brotlidec soname
+Configure miss: brotlienc soname
+Configure miss: brotlienc soname
+Configure miss: brotlienc soname
 Configure miss: cmocka >= 1.0.1
 Configure miss: cmocka >= 1.0.1
 Configure miss: cmocka >= 1.0.1
@@ -36,8 +45,8 @@ Configure miss: faketime
 Configure miss: g++ option to enable C++11 features
 Configure miss: g++ option to enable C++11 features
 Configure miss: g++ option to enable C++11 features
-Configure miss: gcc option to enable large file support
-Configure miss: gcc option to enable large file support
+Configure miss: gcc option to support large files
+Configure miss: gcc option to support large files
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gcc options needed to detect all undeclared functions
@@ -70,6 +79,9 @@ Configure miss: library needed for semaphore functions
 Configure miss: library needed for semaphore functions
 Configure miss: library needed for semaphore functions
 Configure miss: libseccomp
+Configure miss: m soname
+Configure miss: m soname
+Configure miss: m soname
 Configure miss: memset_explicit
 Configure miss: memset_explicit
 Configure miss: memset_explicit
@@ -94,32 +106,65 @@ Configure miss: nettle_kuznyechik_set_key
 Configure miss: nettle_magma_set_key
 Configure miss: nettle_magma_set_key
 Configure miss: nettle_magma_set_key
-Configure miss: nettle_rsa_oaep_sha256_encrypt
-Configure miss: nettle_rsa_oaep_sha256_encrypt
-Configure miss: nettle_rsa_oaep_sha256_encrypt
+Configure miss: oqs soname
+Configure miss: oqs soname
+Configure miss: oqs soname
 Configure miss: pstat_getprocvm
 Configure miss: pstat_getprocvm
 Configure miss: pstat_getprocvm
+Configure miss: random.h
+Configure miss: random.h
+Configure miss: random.h
 Configure miss: strerror_r with POSIX signature
 Configure miss: strerror_r with POSIX signature
 Configure miss: strerror_r with POSIX signature
+Configure miss: strftime_z
+Configure miss: strftime_z
+Configure miss: strftime_z
 Configure miss: timezone_t
 Configure miss: timezone_t
 Configure miss: timezone_t
+Configure miss: tss2-esys soname
+Configure miss: tss2-esys soname
+Configure miss: tss2-esys soname
+Configure miss: tss2-mu soname
+Configure miss: tss2-mu soname
+Configure miss: tss2-mu soname
+Configure miss: tss2-tctildr soname
+Configure miss: tss2-tctildr soname
+Configure miss: tss2-tctildr soname
 Configure miss: unbound library
 Configure miss: unbound library
 Configure miss: unbound library
+Configure miss: unreachable
+Configure miss: unreachable
+Configure miss: unreachable
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether INT64_MAX == LONG_MAX
+Configure miss: whether OQS_SHA3_set_callbacks is declared
+Configure miss: whether OQS_SHA3_set_callbacks is declared
+Configure miss: whether OQS_SHA3_set_callbacks is declared
+Configure miss: whether SEEK_DATA works but is incompatible with GNU
+Configure miss: whether SEEK_DATA works but is incompatible with GNU
+Configure miss: whether SEEK_DATA works but is incompatible with GNU
 Configure miss: whether UINT64_MAX == ULONG_MAX
+Configure miss: whether _putenv is declared
+Configure miss: whether _putenv is declared
+Configure miss: whether _putenv is declared
 Configure miss: whether ctype.h defines __header_inline
 Configure miss: whether ctype.h defines __header_inline
 Configure miss: whether ctype.h defines __header_inline
+Configure miss: whether fflush works on input streams
+Configure miss: whether fflush works on input streams
+Configure miss: whether fflush works on input streams
 Configure miss: whether gai_strerrorA is declared
 Configure miss: whether gai_strerrorA is declared
 Configure miss: whether gai_strerrorA is declared
+Configure miss: whether nullptr_t needs <stddef.h>
+Configure miss: whether nullptr_t needs <stddef.h>
+Configure miss: whether nullptr_t needs <stddef.h>
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
