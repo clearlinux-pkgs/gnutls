@@ -18,12 +18,6 @@ Configure miss: _fseeki64
 Configure miss: bool, true, false
 Configure miss: bool, true, false
 Configure miss: bool, true, false
-Configure miss: brotlidec soname
-Configure miss: brotlidec soname
-Configure miss: brotlidec soname
-Configure miss: brotlienc soname
-Configure miss: brotlienc soname
-Configure miss: brotlienc soname
 Configure miss: cmocka >= 1.0.1
 Configure miss: cmocka >= 1.0.1
 Configure miss: cmocka >= 1.0.1
@@ -33,6 +27,9 @@ Configure miss: compiler option needed when checking for declarations
 Configure miss: crtdefs.h
 Configure miss: crtdefs.h
 Configure miss: crtdefs.h
+Configure miss: elf_aux_info
+Configure miss: elf_aux_info
+Configure miss: elf_aux_info
 Configure miss: explicit_memset
 Configure miss: explicit_memset
 Configure miss: explicit_memset
@@ -63,9 +60,6 @@ Configure miss: if gcc/ld supports -Wl,--output-def
 Configure miss: ioctl with POSIX signature
 Configure miss: ioctl with POSIX signature
 Configure miss: ioctl with POSIX signature
-Configure miss: libbrotlidec >= 1.0.0
-Configure miss: libbrotlidec >= 1.0.0
-Configure miss: libbrotlidec >= 1.0.0
 Configure miss: libbrotlienc >= 1.0.0
 Configure miss: libbrotlienc >= 1.0.0
 Configure miss: libbrotlienc >= 1.0.0
@@ -79,9 +73,6 @@ Configure miss: library needed for semaphore functions
 Configure miss: library needed for semaphore functions
 Configure miss: library needed for semaphore functions
 Configure miss: libseccomp
-Configure miss: m soname
-Configure miss: m soname
-Configure miss: m soname
 Configure miss: memset_explicit
 Configure miss: memset_explicit
 Configure miss: memset_explicit
@@ -106,9 +97,6 @@ Configure miss: nettle_kuznyechik_set_key
 Configure miss: nettle_magma_set_key
 Configure miss: nettle_magma_set_key
 Configure miss: nettle_magma_set_key
-Configure miss: oqs soname
-Configure miss: oqs soname
-Configure miss: oqs soname
 Configure miss: pstat_getprocvm
 Configure miss: pstat_getprocvm
 Configure miss: pstat_getprocvm
@@ -124,15 +112,6 @@ Configure miss: strftime_z
 Configure miss: timezone_t
 Configure miss: timezone_t
 Configure miss: timezone_t
-Configure miss: tss2-esys soname
-Configure miss: tss2-esys soname
-Configure miss: tss2-esys soname
-Configure miss: tss2-mu soname
-Configure miss: tss2-mu soname
-Configure miss: tss2-mu soname
-Configure miss: tss2-tctildr soname
-Configure miss: tss2-tctildr soname
-Configure miss: tss2-tctildr soname
 Configure miss: unbound library
 Configure miss: unbound library
 Configure miss: unbound library
@@ -143,9 +122,6 @@ Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether INT64_MAX == LONG_MAX
-Configure miss: whether OQS_SHA3_set_callbacks is declared
-Configure miss: whether OQS_SHA3_set_callbacks is declared
-Configure miss: whether OQS_SHA3_set_callbacks is declared
 Configure miss: whether SEEK_DATA works but is incompatible with GNU
 Configure miss: whether SEEK_DATA works but is incompatible with GNU
 Configure miss: whether SEEK_DATA works but is incompatible with GNU
@@ -225,6 +201,9 @@ Configure miss: whether to enable TLS heartbeat support
 Configure miss: whether to use the included minitasn1
 Configure miss: whether to use the included minitasn1
 Configure miss: whether to use the included minitasn1
+Configure miss: whether we can dlopen helper-libraries... checking m soname
+Configure miss: whether we can dlopen helper-libraries... checking m soname
+Configure miss: whether we can dlopen helper-libraries... checking m soname
 Configure miss: working nanosleep
 Configure miss: working nanosleep
 Configure miss: x86_64-generic-linux-gnu-file
