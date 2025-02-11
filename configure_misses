@@ -54,6 +54,9 @@ Configure miss: glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0
 Configure miss: glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0
 Configure miss: glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0
 Configure miss: i686-generic-linux-gnu-file
+Configure miss: if endian.h defines stdint types
+Configure miss: if endian.h defines stdint types
+Configure miss: if endian.h defines stdint types
 Configure miss: if gcc/ld supports -Wl,--output-def
 Configure miss: if gcc/ld supports -Wl,--output-def
 Configure miss: if gcc/ld supports -Wl,--output-def
@@ -103,15 +106,18 @@ Configure miss: pstat_getprocvm
 Configure miss: random.h
 Configure miss: random.h
 Configure miss: random.h
+Configure miss: reasonable pthread_rwlock wait queue handling
+Configure miss: reasonable pthread_rwlock wait queue handling
+Configure miss: reasonable pthread_rwlock wait queue handling
 Configure miss: strerror_r with POSIX signature
 Configure miss: strerror_r with POSIX signature
 Configure miss: strerror_r with POSIX signature
-Configure miss: strftime_z
-Configure miss: strftime_z
-Configure miss: strftime_z
 Configure miss: timezone_t
 Configure miss: timezone_t
 Configure miss: timezone_t
+Configure miss: tzalloc
+Configure miss: tzalloc
+Configure miss: tzalloc
 Configure miss: unbound library
 Configure miss: unbound library
 Configure miss: unbound library
@@ -121,6 +127,9 @@ Configure miss: unreachable
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
+Configure miss: whether C compiler handles -Wthread-safety
+Configure miss: whether C compiler handles -Wthread-safety
+Configure miss: whether C compiler handles -Wthread-safety
 Configure miss: whether INT64_MAX == LONG_MAX
 Configure miss: whether SEEK_DATA works but is incompatible with GNU
 Configure miss: whether SEEK_DATA works but is incompatible with GNU
@@ -135,6 +144,9 @@ Configure miss: whether ctype.h defines __header_inline
 Configure miss: whether fflush works on input streams
 Configure miss: whether fflush works on input streams
 Configure miss: whether fflush works on input streams
+Configure miss: whether float.h conforms to ISO C23
+Configure miss: whether float.h conforms to ISO C23
+Configure miss: whether float.h conforms to ISO C23
 Configure miss: whether gai_strerrorA is declared
 Configure miss: whether gai_strerrorA is declared
 Configure miss: whether gai_strerrorA is declared
@@ -147,6 +159,12 @@ Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_sigmask is a macro
 Configure miss: whether pthread_sigmask is a macro
 Configure miss: whether pthread_sigmask is a macro
+Configure miss: whether realloc (..., 0) returns nonnull
+Configure miss: whether realloc (..., 0) returns nonnull
+Configure miss: whether realloc (..., 0) returns nonnull
+Configure miss: whether realloc should abort upon undefined behaviour
+Configure miss: whether realloc should abort upon undefined behaviour
+Configure miss: whether realloc should abort upon undefined behaviour
 Configure miss: whether the compiler is clang
 Configure miss: whether the compiler is clang
 Configure miss: whether the compiler is clang
@@ -201,9 +219,6 @@ Configure miss: whether to enable TLS heartbeat support
 Configure miss: whether to use the included minitasn1
 Configure miss: whether to use the included minitasn1
 Configure miss: whether to use the included minitasn1
-Configure miss: whether we can dlopen helper-libraries... checking m soname
-Configure miss: whether we can dlopen helper-libraries... checking m soname
-Configure miss: whether we can dlopen helper-libraries... checking m soname
 Configure miss: working nanosleep
 Configure miss: working nanosleep
 Configure miss: x86_64-generic-linux-gnu-file
